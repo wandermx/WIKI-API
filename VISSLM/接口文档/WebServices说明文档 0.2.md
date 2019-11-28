@@ -8,7 +8,7 @@
 WebService地址
 
     http://location:port/almws/VALMService.svc
- 
+ 建议：使用Java语言开发可以调用该接口地址的rest方式访问，获取数据比WebService访问更便捷。
 
 ##通用参数
 
@@ -161,6 +161,15 @@ WebService地址
 ### 返回说明
     返回ReturnMsg：failed/success，ErrorMsg：错误说明
 
+## 获取用户信息【GetUserByUserName】
+
+#### 参数说明
+| 参数 | 类型 |说明|
+| --- | :-- |:-- |
+| userName | 字符串 |用户登录名 | 
+### 返回说明
+	返回字典列表，成功：以XML格式返回用户的详细信息，失败：返回400状态码
+
 ## 获取用户登录态【UserVerify】
 
 #### 参数说明
@@ -210,3 +219,32 @@ WebService地址
 
 ### 返回说明
     返回ReturnMsg：failed/success，ErrorMsg：错误说明，成功时ServiceTime：服务器时间
+
+##查询数据类型定义【SearchNodeType】
+
+#### 参数说明
+
+| 参数 | 类型 | 说明 |
+| --- | :--- | :--- |
+| searchConditionList | SearchCondition列表 | 查询条件 |
+| returnProperties | 字符串列表 | 返回数据类型属性 |
+| userInfo | LoginUser | 用户信息 | 
+
+##### property支持属性
+
+| 参数 | 说明 |支持条件|
+| --- | :-- |:-- |
+| Uid | 编号 |= |
+| NodeConfigType | 类型名称 | = |
+| ShowNodeTypeName | 类型显示名 |= |
+
+##### returnProperties支持属性
+
+| 参数 | 说明 |
+| --- | :-- |
+| Uid | 编号 |
+| NodeConfigType | 类型名称 | 
+| ShowNodeTypeName | 类型显示名 |
+
+### 返回说明
+    返回字典列表，成功时根据returnProperties设置的字段属性返回XML格式数据，失败时返回ReturnMsg：failed，ErrorMsg：错误说明
