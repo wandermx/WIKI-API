@@ -73,6 +73,8 @@
 
 >>> - ##### [WebServices说明文档 0.1](VISSLM\接口文档\WebServices说明文档 0.1.md)
 
+>>> - ##### [WebServices说明文档 0.2](VISSLM\接口文档\WebServices说明文档 0.2.md)
+
 >>> - ##### [基础适配器接口规范 1.0](VISSLM\接口文档\基础适配器接口规范 1.0.md)
 
 >>> - ##### [委托UI发送评审](VISSLM\接口文档\委托UI发送评审.md)
