@@ -23,6 +23,7 @@ URI
 | 参数 | 类型 | 是否必填 | 说明 |
 | --- | :-- | :-- | :-- |
 | proId | string | 是 | 项目id |
+| number | int | 否 | 关键字数量，默认返回10个 |
 | {token} | string | 是 | utoken/apitoken/apptoken/... |
 
 返回值
